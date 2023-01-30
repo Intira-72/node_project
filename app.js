@@ -8,7 +8,7 @@ import path from 'path';
 const app = express()
 
 const debug = Debug('app')
-const port = 3000;
+const PORT = process.env.PORT;
 
 app.use(morgan('combined'))
 app.use(express.static(path.dirname('./public/index.html')))
@@ -17,6 +17,6 @@ app.get("/", (req, res) => {
     res.send("Hello BorntoDev");
 })
 
-app.listen(port, () => {
-    debug("Listening On Port " + chalk.green(port));
+app.listen(PORT, () => {
+    debug("Listening On Port " + chalk.green(PORT));
 })
