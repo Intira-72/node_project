@@ -1,24 +1,42 @@
-{
-  "products": [
-    {
-      "title": "Touchwood Chair",
-      "description": ""
-    },
-    {
-      "title": "Fibre Chair",
-      "description": ""
-    },
-    {
-      "title": "Classic Wardrobe",
-      "description": ""
-    },
-    {
-      "title": "Sofa",
-      "description": ""
-    },
-    {
-      "title": "Touchwood Table",
-      "description": ""
-    }
-  ]
-}
+[
+  {
+    "id": 0,
+    "title": "Touchwood Chair",
+    "description": "",
+    "product_discount_tag": "-60%",
+    "regular_price": 28,
+    "discount_price": 69
+  },
+  {
+    "id": 1,
+    "title": "Fibre Chair",
+    "description": "",
+    "product_discount_tag": "-40%",
+    "regular_price": 54,
+    "discount_price": 89
+  },
+  {
+    "id": 2,
+    "title": "Classic Wardrobe",
+    "description": "",
+    "product_discount_tag": "-20%",
+    "regular_price": 39,
+    "discount_price": 49
+  },
+  {
+    "id": 3,
+    "title": "Sofa",
+    "description": "",
+    "product_discount_tag": "-70%",
+    "regular_price": 38,
+    "discount_price": 109
+  },
+  {
+    "id": 4,
+    "title": "Touchwood Table",
+    "description": "",
+    "product_discount_tag": "-50%",
+    "regular_price": 29.5,
+    "discount_price": 59
+  }
+]

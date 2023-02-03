@@ -40,23 +40,29 @@
   
 </head>
 <body>
-    <section id="discount-product" class="discount-product pt-100">
+    <section id="product" class="product-area pt-100 pb-130">
         <div class="container">
             <div class="row">
-            <% products.map((product) => { %>                
-                    <div class="col-lg-6">
-                        <div class="single-discount-product mt-30">
-                            <div class="product-image">
-                                <img src="assets/images/discount-product/product-1.jpg" alt="Product">
-                            </div>
-                            <div class="product-content">
-                                <h4 class="content-title mb-15"> <%= product.title %> </h4>
-                                <p> <%= product.description %> </p>
-                                <a href="/products/<%=product.id%>">View Collection <i class="lni-chevron-right"></i></a>
-                            </div>
+                <div class="single-product-items">
+                    <div class="product-item-image">
+                        <a href="#"><img src="../assets/images/product/p-1.jpg" alt="Product"></a>
+                        <div class="product-discount-tag">
+                            <p><%= product.product_discount_tag %></p>
                         </div>
-                    </div>                
-            <% }) %>  
+                    </div>
+                    <div class="product-item-content text-center mt-30">
+                        <h5 class="product-title"><a href="#"><%= product.title %></a></h5>
+                        <ul class="rating">
+                            <li><i class="lni-star-filled"></i></li>
+                            <li><i class="lni-star-filled"></i></li>
+                            <li><i class="lni-star-filled"></i></li>
+                            <li><i class="lni-star-filled"></i></li>
+                        </ul>
+                        <span class="regular-price">$<%= product.regular_price %></span>
+                        <span class="discount-price">$<%= product.discount_price %></span>
+                    </div>
+                </div>
+            </div> 
             </div>          
         </div>
     </section>
