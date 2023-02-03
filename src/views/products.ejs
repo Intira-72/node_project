@@ -1,0 +1,64 @@
+
+<head>
+   
+    <!--====== Required meta tags ======-->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!--====== Title ======-->
+    <title>Furnish - Furniture and Decor Website Template</title>
+    
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/png">
+
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    
+    <!--====== Animate css ======-->
+    <link rel="stylesheet" href="../assets/css/animate.css">
+    
+    <!--====== Magnific Popup css ======-->
+    <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+    
+    <!--====== Slick css ======-->
+    <link rel="stylesheet" href="../assets/css/slick.css">
+    
+    <!--====== Line Icons css ======-->
+    <link rel="stylesheet" href="assets/css/LineIcons.css">
+    
+    <!--====== Default css ======-->
+    <link rel="stylesheet" href="../assets/css/default.css">
+    
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    
+    <!--====== Responsive css ======-->
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+  
+  
+</head>
+<body>
+    <section id="discount-product" class="discount-product pt-100">
+        <div class="container">
+            <div class="row">
+            <% products.map((product) => { %>                
+                    <div class="col-lg-6">
+                        <div class="single-discount-product mt-30">
+                            <div class="product-image">
+                                <img src="assets/images/discount-product/product-1.jpg" alt="Product">
+                            </div>
+                            <div class="product-content">
+                                <h4 class="content-title mb-15"> <%= product.title %> </h4>
+                                <p> <%= product.description %> </p>
+                                <a href="#">View Collection <i class="lni-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>                
+            <% }) %>  
+            </div>          
+        </div>
+    </section>
+</body>
+

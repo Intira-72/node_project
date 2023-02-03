@@ -18,11 +18,18 @@ app.set("views", "./src/views")
 app.set("view engine", "ejs")
 
 productRouter.route("/").get((req, res) => {
-    res.send("Hello, I'm Products.")
+    res.render("products", {
+        products: [
+            {title: "Touchwood Chair", description: ""},
+            {title: "Fibre Chair", description: ""},
+            {title: "Classic Wardrobe", description: ""},
+            {title: "Sofa", description: ""},
+        ]
+    })
 })
 
 productRouter.route("/1").get((req, res) => {
-    res.send("Hello, I'm Products 1.")
+    res.render('products')
 })
 
 app.use("/products", productRouter)
