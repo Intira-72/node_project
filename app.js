@@ -1,9 +1,12 @@
-import express from 'express';
+import express, { request } from 'express';
 import Debug from 'debug';
 import chalk from 'chalk';
 import morgan from 'morgan';
 import path from 'path';
+import { createRequire } from "module";
 
+const require = createRequire(import.meta.url);
+const products = require("./data/products.json");
 
 const app = express()
 
@@ -18,14 +21,7 @@ app.set("views", "./src/views")
 app.set("view engine", "ejs")
 
 productRouter.route("/").get((req, res) => {
-    res.render("products", {
-        products: [
-            {title: "Touchwood Chair", description: ""},
-            {title: "Fibre Chair", description: ""},
-            {title: "Classic Wardrobe", description: ""},
-            {title: "Sofa", description: ""},
-        ]
-    })
+    res.render("products", products)
 })
 
 productRouter.route("/1").get((req, res) => {
